@@ -1,6 +1,7 @@
 const dbConfig = require("./../config/db.config.js");
 const {Sequelize}  = require("sequelize");
 const config = require("../config/db.config");
+const { response } = require("express");
 
 const sequelize = new Sequelize('project6-db', 'user', 'pass', config)
 
@@ -28,3 +29,4 @@ db.works.belongsTo(db.users, {
 });
 
 module.exports = db;
+
